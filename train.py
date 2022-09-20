@@ -33,7 +33,7 @@ def get_model():
     model.add(Dense(1, activation='sigmoid'))
 
     model.compile(loss=tf.keras.losses.BinaryCrossentropy(),
-                  optimizer=keras.optimizers.Adam(learning_rate=1e-2, beta_1=0.9, beta_2=0.999),
+                  optimizer=tf.keras.optimizers.Adam(learning_rate=1e-2, beta_1=0.9, beta_2=0.999),
 
                   metrics=['accuracy'])
     return model
